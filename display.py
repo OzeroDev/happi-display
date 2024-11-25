@@ -4,6 +4,7 @@ import cv2
 from flask import Flask, request, json
 from threading import Thread
 import asyncio
+from flask_cors import CORS
 
 # Initialize pygame
 pygame.init()
@@ -103,6 +104,7 @@ def play_videos():
 
 
 app = Flask(__name__)
+CORS(app)
 
 
 # add_ipad_response POST request
@@ -110,6 +112,7 @@ app = Flask(__name__)
 def event_callback_api():
     if request.method == 'POST':
         data = json.loads(request.data)
+        print(data)
     
         event_type = data['event_type']
         print(event_type)
