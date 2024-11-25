@@ -124,7 +124,7 @@ def event_callback_api():
 
 def thread_flack():
     asyncio.set_event_loop(asyncio.new_event_loop())
-    app.run(host='0.0.0.0', port=50298, debug=False) 
+    app.run(host='0.0.0.0', port=50299, debug=False) 
 
 
 
